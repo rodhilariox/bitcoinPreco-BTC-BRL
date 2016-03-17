@@ -10,7 +10,7 @@
 
 ## Screenshot ##
 
-[[https://i.imgur.com/JJT08wO.png|alt=Screenshot]]
+(https://i.imgur.com/JJT08wO.png)
 
 Para atualizar os dados:
 
