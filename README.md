@@ -1,4 +1,4 @@
-# bitcoinPreco-BTC-BRL
+# bitcoinPreco-BTC_BRL
 
 ## Exchanges ##
 
@@ -7,6 +7,10 @@
 * BitcoinToYou
 * NegocieCoins
 * FlowBTC
+
+## Screenshot ##
+
+[[https://i.imgur.com/JJT08wO.png|alt=Screenshot]]
 
 Para atualizar os dados:
 
