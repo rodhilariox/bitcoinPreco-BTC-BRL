@@ -1,14 +1,13 @@
 <?php
-$data = json_decode(file_get_contents('api/data.json'));
+$json = json_decode(file_get_contents('api/data.json'));
 //
-$last = $data->total->last;
-$volume = $data->total->volume;
-$usd = $data->total->fiat->usd;
-$cny = $data->total->fiat->cny;
-$eur = $data->total->fiat->eur;
+$last = $json->total->last;
+$volume = $json->total->volume;
+$usd = $json->total->fiat->usd;
+$cny = $json->total->fiat->cny;
+$eur = $json->total->fiat->eur;
 //
-
-$time = $data->timestamp;
+$time = $json->timestamp;
 function timeAgo($time) {
 
     $time = time() - $time; // to get the time since that moment

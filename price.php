@@ -3,7 +3,7 @@ require_once 'data.php';
 ?>
 <title>[<?=number_format($last,2,',','.');?>] BTC Preço</title>
 
-<div class="container" onselectstart="return false">
+<div class="container">
   <div class="row">
     <div class="col s12 m12 l4 center">
       <div class="card blue darken-4">
@@ -16,7 +16,7 @@ require_once 'data.php';
     <div class="col s12 m12 l4 center">
       <div class="card green darken-4">
         <div class="white-text">
-          <h3><i class="fa fa-btc"></i> <?=number_format($volume,8,'.','');?></h3>
+          <h3><i class="fa fa-btc"></i> <?=number_format($volume,4,'.','');?></h3>
           <p><i class="fa fa-arrow-right"></i> Volume (24h)</p>
         </div>
       </div>
@@ -46,7 +46,8 @@ require_once 'data.php';
             </thead>
             <tbody>
               <?php
-              foreach($data->data as $data):?>
+              foreach ($json->data as $data) {
+                if($data == null) { continue; } ?>
                 <tr>
                   <td><img src="assets/img/exchanges/<?=$data->exchange;?>.png" alt="img" width="20px;"> <?=$data->exchange;?></td>
                   <td>R$ <?=number_format($data->last,2,',','.');?></td>
@@ -54,9 +55,9 @@ require_once 'data.php';
                   <td>R$ <?=number_format($data->ask,2,',','.');?></td>
                   <td>R$ <?=number_format($data->low,2,',','.');?></td>
                   <td>R$ <?=number_format($data->high,2,',','.');?></td>
-                  <td><i class="fa fa-btc"></i> <?=number_format($data->volume,8);?></td>
+                  <td><i class="fa fa-btc"></i> <?=number_format($data->volume,4);?></td>
                 </tr>
-              <?php endforeach;?>
+              <?php } ?>
             </tbody>
           </table>
           <br>
